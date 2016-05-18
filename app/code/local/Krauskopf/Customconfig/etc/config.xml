@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Krauskopf_Customconfig>
+            <version>1.0.0</version>
+        </Krauskopf_Customconfig>
+    </modules>
+    <global>
+        <helpers>
+            <customconfig>
+                <class>Krauskopf_Customconfig_Helper</class>
+            </customconfig>
+        </helpers>
+        <models>
+            <customconfig>
+                <class>Krauskopf_Customconfig_Model</class>
+            </customconfig>
+        </models>
+    </global>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <customconfig_options>
+                                            <title>Custom Configuration Section</title>
+                                        </customconfig_options>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>

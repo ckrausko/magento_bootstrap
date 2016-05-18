@@ -1,0 +1,16 @@
+/errors/
+/install.php
+/lib/Zend/
+/lib/Varien/
+/LICENSE*
+/media/
+/php.ini.sample
+/pkginfo/
+/RELEASE_NOTES.txt
+/var/
+.buildpath
+.htaccess
+.htaccess.sample
+.idea/
+.project
+.settings/

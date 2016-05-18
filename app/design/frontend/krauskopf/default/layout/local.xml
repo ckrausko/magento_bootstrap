@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<layout>
+    <default>
+        <action method="unsetChild"><name>catalog.compare.sidebar</name></action>
+    </default>
+
+    <configviewer_index_index>
+        <block type="page/html" name="root" output="toHtml" template="magentotutorial/configviewer/simple_page.phtml" />
+    </configviewer_index_index>
+
+    <default>
+        <reference name="header">
+            <remove name="top.search"></remove>
+        </reference>
+    </default>
+    <catalog_category_layered translate="label">
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/2columns-left.phtml</template>
+            </action>
+        </reference>
+    </catalog_category_layered>
+
+</layout>

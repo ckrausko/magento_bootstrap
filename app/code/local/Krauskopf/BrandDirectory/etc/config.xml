@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Krauskopf_BrandDirectory>
+            <version>0.0.1</version>
+        </Krauskopf_BrandDirectory>
+    </modules>
+
+    <global>
+
+        <blocks>
+            <krauskopf_branddirector_adminhtml>
+                <class>Krauskopf_BrandDirectory_Block_Adminhtml</class>
+            </krauskopf_branddirector_adminhtml>
+        </blocks>
+
+        <helpers>
+            <krauskopf_branddirectory>
+                <class>Krauskopf_BrandDirectory_Helper</class>
+            </krauskopf_branddirectory>
+        </helpers>
+        <models>
+            <krauskopf_branddirectory>
+                <resourceModel>krauskopf_branddirectory_resource</resourceModel>
+            </krauskopf_branddirectory>
+            <krauskopf_branddirectory_resource>
+                <entities>
+                    <brand>
+                        <table>krauskopf_branddirectory_brand</table>
+                    </brand>
+                </entities>
+            </krauskopf_branddirectory_resource>
+        </models>
+
+        <resources>
+            <krauskopf_branddirectory_setup>
+                <setup>
+                    <module>Krauskopf_BrandDirectory</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </krauskopf_branddirectory_setup>
+        </resources>
+
+    </global>
+
+    <admin>
+        <routers>
+            <krauskopf_branddirectory_admin>
+                <use>admin</use>
+                <args>
+                    <module>Krauskopf_BrandDirectory_Adminhtml</module>
+                    <frontName>brand-directory-admin</frontName>
+                </args>
+            </krauskopf_branddirectory_admin>
+        </routers>
+    </admin>
+
+</config>

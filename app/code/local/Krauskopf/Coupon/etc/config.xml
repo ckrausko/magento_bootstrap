@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Krauskopf_Coupon>
+            <version>0.0.1</version>
+        </Krauskopf_Coupon>
+    </modules>
+
+    <global>
+        <models>
+            <krauskopf_coupon>
+                <class>Krauskopf_Coupon_Model</class>
+            </krauskopf_coupon>
+        </models>
+    </global>
+
+    <frontend>
+        <events>
+            <checkout_cart_product_add_after>
+                <observers>
+                    <Coupon_apply>
+                        <type>singleton</type>
+                        <class>Coupon/Observer</class>
+                        <method>applyCoupon</method>
+                    </Coupon_apply>
+                </observers>
+            </checkout_cart_product_add_after>
+        </events>
+
+        <routers>
+            <krauskopf_coupon>
+                <use>standard</use>
+                <args>
+                    <module>Krauskopf_Coupon</module>
+                    <frontName>coup</frontName>
+                </args>
+            </krauskopf_coupon>
+        </routers>
+    </frontend>
+
+</config>

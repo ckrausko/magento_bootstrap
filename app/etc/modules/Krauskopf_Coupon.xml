@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Krauskopf_Coupon>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Krauskopf_Coupon>
+    </modules>
+</config>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Krauskopf_Test>
+            <version>1.0.0</version>
+        </Krauskopf_Test>
+    </modules>
+
+    <frontend>
+        <routers>
+            <krauskopf_test>
+                <use>standard</use>
+                <args>
+                    <module>Krauskopf_Test</module>
+                    <frontName>testies</frontName>
+                </args>
+            </krauskopf_test>
+        </routers>
+
+        <layout>
+            <updates>
+                <krauskopf_test>
+                    <file>test.xml</file>
+                </krauskopf_test>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <blocks>
+            <krauskopf_test>
+                <class>Krauskopf_Test_Block</class>
+            </krauskopf_test>
+        </blocks>
+    </global>
+</config>

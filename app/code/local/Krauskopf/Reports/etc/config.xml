@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Krauskopf_Reports>
+            <version>1.0.0</version>
+        </Krauskopf_Reports>
+    </modules>
+
+    <global>
+        <helpers>
+            <krauskopf_reports>
+                <class>Krauskopf_Reports_Helper</class>
+            </krauskopf_reports>
+        </helpers>
+
+        <blocks>
+            <krauskopf_reports>
+                <class>Krauskopf_Reports_Block</class>
+            </krauskopf_reports>
+        </blocks>
+
+        <models>
+            <krauskopf_reports>
+                <class>Krauskopf_Reports_Model</class>
+                <resourceModel>krauskopf_reports_mysql4</resourceModel>
+            </krauskopf_reports>
+
+            <krauskopf_reports_mysql4>
+                <class>Krauskopf_Reports_Mysql4</class>
+                <entities>
+                    <reps>
+                        <table>krauskopf_reports_reps</table>
+                    </reps>
+                </entities>
+            </krauskopf_reports_mysql4>
+        </models>
+
+        <resources>
+            <krauskopf_reports_setup>
+                <setup>
+                    <module>Krauskopf_Reports</module>
+                </setup>
+            </krauskopf_reports_setup>
+        </resources>
+    </global>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Krauskopf_Reports before="Mage_Adminhtml">Krauskopf_Reports_Adminhtml</Krauskopf_Reports>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <krauskopf_reports>
+                    <file>krauskopf/reports.xml</file>
+                </krauskopf_reports>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <krauskopf_giftregistry_index_index>
+        <reference name="content">
+            <block name="giftregistry.list" type="krauskopf_giftregistry/list" template="krauskopf/list.phtml" as="giftregistry_list"/>
+        </reference>
+    </krauskopf_giftregistry_index_index>
+
+    <krauskopf_giftregistry_index_new>
+        <reference name="content">
+            <block name="giftregistry.new" type="core/template" template="krauskopf/new.phtml" as="giftregistry_new"/>
+        </reference>
+    </krauskopf_giftregistry_index_new>
+
+    <krauskop_giftregistry_index_edit>
+    </krauskop_giftregistry_index_edit>
+
+    <krauskopf_giftregistry_view_view>
+        <reference name="content">
+            <block name="giftregistry.view" type="core/template" template="krauskopf/view.phtml" as="giftregistry_view"/>
+        </reference>
+    </krauskopf_giftregistry_view_view>
+
+    <krauskopf_giftregistry_search_index>
+        <reference name="content">
+            <block name="giftregistry.search" type="core/template" template="krauskopf/search.phtml" as="giftregistry_search"/>
+        </reference>
+    </krauskopf_giftregistry_search_index>
+
+    <krauskopf_giftregistry_search_results>
+        <reference name="content">
+            <block name="giftregistry.results" type="krauskopf_giftregistry/list" template="krauskopf/list.phtml"/>
+        </reference>
+    </krauskopf_giftregistry_search_results>
+
+</layout>

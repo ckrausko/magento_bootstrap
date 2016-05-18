@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout>
+    <import_import_index>
+        <reference name="content">
+            <block type="krauskopf_import/button" name="import" template="krauskopf/import.phtml"/>
+        </reference>
+    </import_import_index>
+</layout>

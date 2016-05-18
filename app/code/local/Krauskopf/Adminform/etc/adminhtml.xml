@@ -1,0 +1,15 @@
+<config>
+    <menu>
+        <krauskopf translate="title" module="krauskopf_adminform">
+            <title>Krauskopf</title>
+            <sort_order>90</sort_order>
+            <children>
+                <form translate="title" module="krauskopf_adminform">
+                    <title>Form</title>
+                    <sort_order>10</sort_order>
+                    <action>adminhtml/adminform</action>
+                </form>
+            </children>
+        </krauskopf>
+    </menu>
+</config>

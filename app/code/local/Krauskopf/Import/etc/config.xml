@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Krauskopf_Import>
+            <version>0.1.0</version>
+        </Krauskopf_Import>
+    </modules>
+
+    <global>
+        <models>
+            <krauskopf_import>
+                <class>Krauskopf_Import_Model</class>
+                <resourceModel>krauskopf_import_resource</resourceModel>
+            </krauskopf_import>
+            <krauskopf_import_resource>
+                <class>Krauskopf_Import_Model_Resource</class>
+            </krauskopf_import_resource>
+        </models>
+
+        <blocks>
+            <krauskopf_import>
+                <class>Krauskopf_Import_Block</class>
+            </krauskopf_import>
+        </blocks>
+
+        <helpers>
+            <krauskopf_import>
+                <class>Krauskopf_Import_Helper</class>
+            </krauskopf_import>
+        </helpers>
+
+
+    </global>
+
+    <admin>
+        <routers>
+            <import>
+                <use>admin</use>
+                <args>
+                    <module>Krauskopf_Import_Adminhtml</module>
+                    <frontName>import</frontName>
+                </args>
+            </import>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <krauskopf>
+                    <file>krauskopf.xml</file>
+                </krauskopf>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>

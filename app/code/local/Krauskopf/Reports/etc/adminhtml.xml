@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <sales>
+            <children>
+                <krauskopf_reports_reps translate="title" module="krauskopf_reports">
+                    <title>Improved Reports</title>
+                    <action>adminhtml/reps</action>
+                </krauskopf_reports_reps>
+            </children>
+        </sales>
+    </menu>
+
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <sales>
+                        <children>
+                            <krauskopf_reports_reps>
+                                <title>Improved Reports</title>
+                            </krauskopf_reports_reps>
+                        </children>
+                    </sales>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

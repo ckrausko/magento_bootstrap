@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Krauskopf_CustomProduct>
+            <version>1.0.0</version>
+        </Krauskopf_CustomProduct>
+    </modules>
+
+    <global>
+        <catalog>
+            <product>
+                <type>
+                    <custom translate="label" module="krauskopf_customproduct">
+                        <label>Custom Product</label>
+                        <model>krauskopf_customproduct/product_type</model>
+                        <is_qty>0</is_qty>
+                        <composite>1</composite>
+                        <can_use_qty_decimals>0</can_use_qty_decimals>
+                    </custom>
+                </type>
+            </product>
+        </catalog>
+
+        <resources>
+            <krauskopf_customproduct_setup>
+                <setup>
+                    <module>Krauskopf_CustomProduct</module>
+                    <class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+                </setup>
+            </krauskopf_customproduct_setup>
+        </resources>
+
+        <blocks>
+            <krauskopf_customproduct>
+                <class>Krauskopf_CustomProduct_Block</class>
+            </krauskopf_customproduct>
+        </blocks>
+        <helpers>
+            <krauskopf_customproduct>
+                <class>Krauskopf_CustomProduct_Helper</class>
+            </krauskopf_customproduct>
+        </helpers>
+        <models>
+            <krauskopf_customproduct>
+                <class>Krauskopf_CustomProduct_Model</class>
+                <resourceModel>krauskopf_customproduct_resource</resourceModel>
+            </krauskopf_customproduct>
+            <krauskopf_customproduct_resource>
+                <class>Krauskopf_CustomProduct_Model_Resource</class>
+            </krauskopf_customproduct_resource>
+        </models>
+    </global>
+
+</config>

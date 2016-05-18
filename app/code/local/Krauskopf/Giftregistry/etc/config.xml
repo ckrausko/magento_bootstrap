@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Krauskopf_Giftregistry>
+            <version>0.1.0</version>
+        </Krauskopf_Giftregistry>
+    </modules>
+
+    <global>
+        <models>
+            <krauskopf_giftregistry>
+                <class>Krauskopf_Giftregistry_Model</class>
+                <resourceModel>krauskopf_giftregistry_mysql4</resourceModel>
+            </krauskopf_giftregistry>
+            <krauskopf_giftregistry_mysql4>
+                <class>Krauskopf_Giftregistry_Model_Mysql4</class>
+                <entities>
+                    <entity>
+                        <table>krauskopf_giftregistry_entity</table>
+                    </entity>
+                    <item>
+                        <table>krauskopf_giftregistry_item</table>
+                    </item>
+                    <type>
+                        <table>krauskopf_giftregistry_type</table>
+                    </type>
+                </entities>
+            </krauskopf_giftregistry_mysql4>
+        </models>
+
+        <blocks>
+            <krauskopf_giftregistry>
+                <class>Krauskopf_Giftregistry_Block</class>
+            </krauskopf_giftregistry>
+        </blocks>
+        <helpers>
+            <krauskopf_giftregistry>
+                <class>Krauskopf_Giftregistry_Helper</class>
+            </krauskopf_giftregistry>
+        </helpers>
+        <resources>
+            <krauskopf_giftregistry_setup>
+                <setup>
+                    <module>Krauskopf_Giftregistry</module>
+                    <class>Krauskopf_Giftregistry_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </krauskopf_giftregistry_setup>
+            <krauskopf_giftregistry_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </krauskopf_giftregistry_write>
+            <krauskopf_giftregistry_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </krauskopf_giftregistry_read>
+        </resources>
+    </global>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <krauskopf_giftregistry before="Mage_Adminhtml">Krauskopf_Giftregistry_Adminhtml</krauskopf_giftregistry>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

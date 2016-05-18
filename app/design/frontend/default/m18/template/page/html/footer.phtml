@@ -1,0 +1,57 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<div class="footer-container">
+    <div class="footer">
+        <div class="footer-about footer-col">
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_about')->toHtml(); ?>
+         </div>
+        <?php
+        $_helper = Mage::helper('catalog/category');
+        $_categories = $_helper->getStoreCategories();
+        if (count($_categories) > 0): ?>
+            <ul>
+                <?php foreach($_categories as $_category): ?>
+                    <li><a href="<?php echo $_helper->getCategoryUrl($_category) ?>"><?php echo $_category->getName() ?></a></li>
+                <?php endforeach; ?>
+            </ul>
+        <?php endif; ?>
+
+
+        <div class="footer-col footer-categories">
+            <?php echo $this->getChildHtml() ?>
+            <address><?php echo $this->getCopyright() ?></address>
+        </div>
+
+        <a class="twitter-timeline" href="https://twitter.com/RichardCarter"
+           data-widget-id="123456789999999999">Tweets by @RichardCarter</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)
+                [0],p=/^http:/.test(d.location)?'http':'https';if(!d.
+                    getElementById(id)){js=d.createElement(s);js.id=id;js.
+                src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.
+                insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+</div>

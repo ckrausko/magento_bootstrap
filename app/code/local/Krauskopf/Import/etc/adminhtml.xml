@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <krauskopf translate="title" module="krauskopf_import">
+            <title>Krauskopf</title>
+            <sort_order>100</sort_order>
+            <children>
+                <example>
+                    <title>Import</title>
+                    <sort_order>1</sort_order>
+                    <action>import/import/index</action>
+                </example>
+            </children>
+        </krauskopf>
+    </menu>
+</config>

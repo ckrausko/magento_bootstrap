@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Krauskopf_Customconfig>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Krauskopf_Customconfig>
+    </modules>
+</config>

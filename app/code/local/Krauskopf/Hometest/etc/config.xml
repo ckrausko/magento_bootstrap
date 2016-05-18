@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Krauskopf_Hometest>
+            <version>1.0</version>
+        </Krauskopf_Hometest>
+    </modules>
+
+    <global>
+        <blocks>
+            <krauskopf_hometest>
+                <class>Krauskopf_Hometest_Block</class>
+            </krauskopf_hometest>
+        </blocks>
+    </global>
+</config>

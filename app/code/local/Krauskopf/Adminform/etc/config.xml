@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Krauskopf_Adminform>
+            <version>0.1.0</version>
+        </Krauskopf_Adminform>
+    </modules>
+    <global>
+                <models>
+            <krauskopf_adminform>
+                <class>Krauskopf_Adminform_Model</class>
+                <resourceModel>krauskopf_Adminform_resource</resourceModel>
+            </krauskopf_adminform>
+            <krauskopf_adminform_resource>
+                <class>Krauskopf_Adminform_Model_Resource</class>
+            </krauskopf_adminform_resource>
+        </models>                <blocks>
+            <krauskopf_adminform>
+                <class>Krauskopf_Adminform_Block</class>
+            </krauskopf_adminform>
+        </blocks>                <helpers>
+            <krauskopf_Adminform>
+                <class>Krauskopf_Adminform_Helper</class>
+            </krauskopf_Adminform>
+        </helpers>                <resources>
+            <krauskopf_adminform_setup>
+                <setup>
+                    <module>Krauskopf_Adminform</module>
+                </setup>
+            </krauskopf_adminform_setup>
+        </resources>    </global>
+
+
+</config>
