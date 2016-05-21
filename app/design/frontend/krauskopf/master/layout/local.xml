@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * @category    design
+ * @package     YOURTHEME
+ */
+-->
+<layout>
+    <!--
+    Default layout, loads most of the pages
+    -->
+
+    <default>
+        <action method="addCss"><stylesheet>css/bootstrap.min.css</stylesheet></action>
+    </default>
+
+</layout>
